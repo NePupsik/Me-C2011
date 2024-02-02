@@ -7,6 +7,7 @@ class Student:
         self.name = name
         self.gladness = 50
         self.progress = 0
+        self.money = 50
         self.alive = True
 
     def to_study(self):
@@ -22,6 +23,13 @@ class Student:
         print("I need a little break")
         self.progress -= 0.25
         self.gladness += 4
+        self.money -= 1
+
+    def to_go_shopping(self):
+        print("Im hungry!")
+        self.money -= 5
+        self.gladness += 3
+
 
     def is_alive(self):
         if self.progress < -0.5:
@@ -32,7 +40,9 @@ class Student:
             self.alive = False
         elif self.progress > 10:
             print("You finished a IT STEP!!!! (You WIN!!)")
-
+        elif self.money < 0:
+            print("You are БОМЖ!! (You lose)")
+            self.alive = False
     def end_of_day(self):
         print("End of a day")
         print(f"Gladness = {self.gladness}")
@@ -48,7 +58,7 @@ class Student:
         if live_cube == 3:
             self.to_sleep()
         if live_cube == 4:
-            self.to_study()
+            self.to_go_shopping()
         self.end_of_day()
         self.is_alive()
 
