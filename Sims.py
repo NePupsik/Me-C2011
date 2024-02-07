@@ -69,9 +69,17 @@ class Human:
     def get_home(self):
         self.home = House()
     def chill(self):
-        pass
+        self.gladness += 5
+        self.home.food -= 4
     def to_repair(self):
-        pass
+        if brand_of_car == "BMW":
+            self.car.strength = 100
+        elif brand_of_car == "Lada":
+            self.car.strength = 20
+        elif brand_of_car == "Volvo":
+            self.car.strength = 120
+        elif brand_of_car == "Ferrari":
+            self.car.strength = 80
     def day_indexes(self, day):
         d = f"Today the {day} of {self.name}'s live"
         print(f"{d:=^50}\n")
