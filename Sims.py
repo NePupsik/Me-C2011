@@ -85,10 +85,22 @@ class Human:
         print(f"{d:=^50}\n")
         h_i = f"{self.name}'s indexes"
         print(f"{h_i:=^50}\n")
+        print(self.gladness)
+        print(self.satiety)
+        print(self.job)
+        print(self.home)
+        print(self.car)
         home_i = "Home indexes"
         print(f"{home_i:=^50}\n")
+        print(self.food)
+        print(self.mess)
         car_i = f"{self.car.brand} car indexes"
         print(f"{car_i:=^50}\n")
+        print(self.brand)
+        print(self.fuel)
+        print(self.strength)
+        print(self.cons)
+
     def is_alive(self):
         pass
     def live(self):
